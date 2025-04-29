@@ -58,9 +58,9 @@ func readshuttle(quitch chan struct{}, se *devices.ShuttlExpress, mc devices.Mid
 			}
 		case dd := <-se.Dial_direction:
 			if dd == 1 {
-				mc.SendCommand(2, 2, false)
+				mc.SendCommand(2, 65, false)
 			} else {
-				mc.SendCommand(2, 1, false)
+				mc.SendCommand(2, 63, false)
 			}
 		case b1 := <-se.Button1_pressed:
 			if b1 {
